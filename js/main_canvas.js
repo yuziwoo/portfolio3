@@ -1,18 +1,50 @@
+let scrollCount = 0;
+
 class App {
   constructor() {
     this.canvas = document.createElement("canvas");
     this.canvas.classList.add("canvas_wave")
     this.ctx = this.canvas.getContext("2d");
-    document.body.appendChild(this.canvas);
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.isclicked = 0;
+    this.bodyCount = 0;
 
+    this.section_01 = document.getElementsByClassName("section_01")[0];
+    this.section_02 = document.getElementsByClassName("section_02")[0];
+    this.view_01 = document.getElementsByClassName("view_01")[0];
     this.view_02 = document.getElementsByClassName("view_02")[0];
+    this.view_02_box2 = document.getElementsByClassName("box2")[0];
+    this.wrap = document.getElementsByClassName("wrap")[0];
+
+
+    if(window.scrollY >= 99){
+      if(!this.view_02.classList.contains("view_02_start")){
+        this.view_02.classList.add("view_02_start");
+        this.canvas.style.display = "none";
+        this.section_01.style.display = "block";
+        this.section_01.style.position = "relative";
+        this.view_01.style.display = "none";
+        this.section_01.style.height = `${this.wrap.offsetHeight}px`;
+        document.body.style.overflowY = "auto";
+        scrollCount += 1;
+        this.scrolling();
+
+        document.body.addEventListener("wheel", (e) => {
+          this.scrolling(e);
+        })
+        document.documentElement.addEventListener("touchmove", (e) => {
+          this.scrolling(e);
+        })
+      }
+
+    }
 
 
     this.waves = new Waves();
 
     window.addEventListener("resize", () => {
       this.resize();
+      this.section_01.style.height = `${this.wrap.offsetHeight}px`;
     });
 
     document.documentElement.addEventListener("click", () => {
@@ -35,7 +67,7 @@ class App {
 
   resize() {
     this.stageWidth = document.body.clientWidth;
-    this.stageHeight = document.body.clientHeight;
+    this.stageHeight = window.innerHeight;
 
     this.canvas.width = this.stageWidth;
     this.canvas.height = this.stageHeight;
@@ -61,10 +93,38 @@ class App {
       if(this.isclicked > 150 && this.isclicked < 152){
         if(!this.view_02.classList.contains("view_02_start")){
           this.view_02.classList.add("view_02_start");
+          this.canvas.style.display = "none";
+          this.section_01.style.display = "block";
+          this.view_01.style.display = "none";
+          this.section_01.style.position = "relative";
+          this.bodyCount = 1;
+          this.section_01.style.height = `${this.wrap.offsetHeight}px`;
+          document.body.style.overflowY = "auto";
+          scrollCount += 1;
         }
       }
+      if(this.isclicked > 170 && this.bodyCount == 1){
+        document.body.addEventListener("wheel", (e) => {
+          this.scrolling(e);
+        })
+        document.documentElement.addEventListener("touchmove", (e) => {
+          this.scrolling(e);
+        })
+        this.bodyCount += 1;
+      }
     }
+  }
 
+  scrolling(e) {
+    if(window.innerWidth > 1000){
+      if(window.scrollY > this.section_01.offsetHeight - 388){
+        this.section_01.style.backgroundColor = "white";
+        this.section_02.style.backgroundColor = "white";
+      }else{
+        this.section_01.style.backgroundColor = "#050505";
+        this.section_02.style.backgroundColor = "#050505";
+      }
+    }
   }
 } /* class App 종료*/
 
@@ -176,10 +236,39 @@ class Wave {
     ctx.lineTo(this.pointGap[0], this.stageHeight);
     ctx.fill();
     ctx.closePath()
-
   }
 }
 
+/* 스크롤 이벤트 잠시 꺼두기 */
+function scrollEvent(evt) {
+  if(scrollCount < 1){
+    evt.preventDefault();
+  }
+}
+
+
+
+
 window.addEventListener("DOMContentLoaded", (e) => {
+  /*버튼 따라다니기 효과*/
+  let button = [];
+  let button_text = ["personality", "works", "skill", "contact"];
+  for(let i=0; i<document.getElementsByClassName("button").length; i++){
+    button.push(document.getElementsByClassName("button")[i]);
+    document.getElementsByClassName("button")[i].firstElementChild.addEventListener("mouseenter", (e) => {
+      button[i].firstElementChild.innerText = button_text[i];
+    })
+    document.getElementsByClassName("button")[i].firstElementChild.addEventListener("mouseleave", (e) => {
+      button[i].firstElementChild.innerText = "More";
+    })
+  }
+
   let wave = new App();
+
+  window.addEventListener("mousedown", (e) => {
+    if(e.button == 1){
+      e.preventDefault();
+      alert("해당 사이트에서 휠 클릭 기능을 사용할 수 없습니다.")
+    }
+  })
 });

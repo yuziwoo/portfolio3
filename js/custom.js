@@ -133,28 +133,22 @@ document.documentElement.addEventListener("wheel", (e) => {
       }
     }
   })
-/* 터치 이벤트 터치무브로 넣은 경우
-  document.documentElement.addEventListener("touchmove", (e) => {
-     for (i=0; i < e.changedTouches.length; i++){
-       if (e.changedTouches[i].pageY > touch_pagey){
-         if(!header.classList.contains("header_hide")){
-           header.classList.add("header_hide");
-           header_m.classList.add("header_hide");
-         }
-       }else if(e.changedTouches[i].pageY < touch_pagey){
-         if(header.classList.contains("header_hide")){
-           header.classList.remove("header_hide");
-           header_m.classList.remove("header_hide");
-         }
-       }
 
-       if(document.documentElement.scrollTop < 500){
-         header.classList.remove("header_hide");
-         header_m.classList.remove("header_hide");
-       }
 
-        touch_pagey = e.changedTouches[i].pageY
-     }
-  }, false);
-  */
+  /*버튼 따라다니기 효과*/
+  let button = [];
+  for(let i=0; i<document.getElementsByClassName("button").length; i++){
+    button.push(document.getElementsByClassName("button")[i]);
+    document.getElementsByClassName("button")[i].addEventListener("mousemove", (e) => {
+      let scrollWidth = document.getElementsByClassName("button")[i].scrollWidth / 2;
+      let scrollHeight = document.getElementsByClassName("button")[i].scrollHeight / 2;
+      let moveX = e.offsetX - scrollWidth;
+      let moveY = e.offsetY - scrollHeight;
+      document.getElementsByClassName("button")[i].children[0].style.transform = `translateX(${moveX / 4}px) translateY(${moveY / 4}px)`;
+    })
+    document.getElementsByClassName("button")[i].addEventListener("mouseleave", (e) => {
+      document.getElementsByClassName("button")[i].children[0].style.transform = `none`;
+    })
+  }
+
 });

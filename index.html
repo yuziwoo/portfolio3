@@ -5,7 +5,7 @@
     <title>지우의 포트폴리오</title>
 
     <!-- 호환성 및 뷰포트 -->
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, height=device-height' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, height=device-height, user-scalable=no' />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
     <!-- 기본 meta -->
@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="지우의 포트폴리오">
 
     <!-- favicon -->
-    <!-- <link rel="shortcut icon" href="img/favicon.ico">  수정필요 -->
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- CSS-->
     <link rel="stylesheet" href="css/custom.css">
@@ -38,14 +38,14 @@
     <script type="text/javascript" src="js/main_canvas.js">/**/</script>
 
   </head>
-  <body>
+  <body onmousewheel="scrollEvent(event);" ontouchmove="scrollEvent(event);">
 
     <section class="section_01">
       <div class="view_01">
         <h1>끊임없이 도전하라</h1>
         <h6>안녕하세요. 혹시 열정적인 퍼블리셔를 찾고 계신가요?</h6>
         <div class="arrow">
-          <img src="img/down-arrow.png" alt="">
+          <img src="img/down-arrow.png" alt="No-Image">
         </div>
         <div class="circle_wrap">
           <div class="circle circle1">
@@ -55,10 +55,34 @@
         </div>
       </div>
       <div class="view_02">
-        
+        <div class="wrap">
+          <div class="box1">
+            <div class="effect"></div>
+          </div>
+          <div class="box2">
+            <h1>꼼꼼하고</h1>
+            <h1>책임감 있는</h1>
+          </div>
+          <div class="box3">
+            <p>꿈과 목표가 있는 회사에서 날개를 펼쳐보고 싶어요.<br>
+            저는 제 일을 사랑하고, 다가올 멋진 미래 속 제 자신을 꿈꾸며,<br>
+            분명한 목표를 가지고 하루하루를 준비해 나가고 있습니다.<br>
+            저의 성격, 가치관, 웹퍼블리셔가 되기 전 과거에 대해서<br>
+            더 자세히 알아보시려면 아래 버튼을 눌러주세요.</p>
+          </div>
+          <div class="box4">
+            <div class="button">
+              <a href="#"><span>More</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="section_02">
+
+    </section>
 
   </body>
+
 </html>

@@ -6,7 +6,13 @@ font-family: 'Prompt', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
 
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 /* 기본값 초기화 */
 html{
   margin: 0;
@@ -15,7 +21,10 @@ html{
 }
 body{
   margin: 0;
+  width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
 }
 a{
   color: #333333;
@@ -30,7 +39,7 @@ ul{
 .header{
   font-family: 'Roboto', sans-serif;
   background: rgba(0, 0, 0, 0.8);
-  width: 100%;
+  width: 100vw;
   height: 44px;
   padding: 0px 25px;
   position: fixed;
