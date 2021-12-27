@@ -125,7 +125,16 @@ class App {
         this.section_02.style.backgroundColor = "#050505";
       }
     }
-  }
+    if(window.innerWidth <= 1000){
+      if(window.scrollY > this.section_01.offsetHeight - 150){
+        this.section_01.style.backgroundColor = "white";
+        this.section_02.style.backgroundColor = "white";
+      }else{
+        this.section_01.style.backgroundColor = "#050505";
+        this.section_02.style.backgroundColor = "#050505";
+      }
+    }
+  } /* scrolling 종료*/
 } /* class App 종료*/
 
 class Waves {
