@@ -500,3 +500,19 @@ body{
   padding-top: 20px;
   padding-bottom: 10px;
 }
+
+@media screen and (max-width: 1000px){
+  .section_02 .text_wrap h1{
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .section_02 .section_02_content{
+    top: 400px;
+  }
+}
+@media screen and (max-width: 673px){
+  .section_02 .text_wrap h1{
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
