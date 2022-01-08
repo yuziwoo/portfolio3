@@ -13,8 +13,10 @@ class App {
     this.section_02 = document.getElementsByClassName("section_02")[0];
     this.view_01 = document.getElementsByClassName("view_01")[0];
     this.view_02 = document.getElementsByClassName("view_02")[0];
+    this.view_02_box1 = document.getElementsByClassName("box1")[0];
     this.view_02_box2 = document.getElementsByClassName("box2")[0];
     this.wrap = document.getElementsByClassName("wrap")[0];
+
 
 
     if(window.scrollY >= 99){
@@ -75,6 +77,8 @@ class App {
 
     this.waves.resize(this.stageWidth,this.stageHeight);
 
+    this.scrolling();
+
     if(this.isclicked >= 200){
       requestAnimationFrame(this.animate.bind(this));
     }
@@ -126,7 +130,7 @@ class App {
       }
     }
     if(window.innerWidth <= 1000){
-      if(window.scrollY > this.section_01.offsetHeight - 150){
+      if(window.scrollY > this.section_01.offsetHeight - 100){
         this.section_01.style.backgroundColor = "white";
         this.section_02.style.backgroundColor = "white";
       }else{
