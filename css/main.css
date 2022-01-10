@@ -401,6 +401,8 @@ body{
   height: 440vh;
   transition: background-color 1s;
   color: #050505;
+  position: relative;
+  z-index: 1;
 }
 
 .button{
@@ -444,9 +446,6 @@ body{
   padding-bottom: 1px;
 }
 
-.section_02{
-  position: relative;
-}
 
 .section_02 .button a{
   background: white;
@@ -465,7 +464,7 @@ body{
   position: -webkit-sticky;
   top: 0px;
   opacity: 0;
-  transition: opacity 0.2s 0.5s;
+  transition: opacity 0.5s 0.5s;
 }
 .section_02 .text_wrap h1{
   font-size: 8.5vw;
@@ -514,7 +513,7 @@ body{
   height: 500px;
   position: relative;
   top: 30px;
-  left: 30vw;
+  left: 20vw;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -536,7 +535,7 @@ body{
   height: 500px;
   position: relative;
   top: 30px;
-  left: calc(30vw + 200px);
+  left: calc(20vw + 400px);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -700,6 +699,27 @@ body{
   .section_02 .section_02_content{
     top: 400px;
   }
+  .section_02 .section_02_img2{
+    left: 5vw;
+  }
+  .section_02 .section_02_img1{
+    left: 5vw;
+  }
+}
+@media screen and (max-width: 1200px){
+  .section_02 .text_wrap h1{
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .section_02 .section_02_content{
+    top: 400px;
+  }
+  .section_02 .section_02_img2{
+    left: calc(10vw + 400px);
+  }
+  .section_02 .section_02_img1{
+    left: 10vw;
+  }
 }
 @media screen and (max-width: 673px){
   .section_02 .text_wrap h1{
@@ -723,6 +743,110 @@ body{
 
 .section_03{
   width: 100vw;
-  height: 200vh;
-  background: lightblue;
+  height: calc(100vh + 3600px);
+  position: relative;
+}
+.section_03 .section_03_sticky{
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.section_03 .section_03_sticky .section_03_img{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section_03 .section_03_sticky .section_03_img1{
+  background-image: url("../img/gradient1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  transition: all 0.2s;
+}
+.section_03 .section_03_sticky .headline_wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.section_03 .section_03_sticky .headline_wrapper .headline{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.section_03 .section_03_sticky .headline_wrapper .headline span{
+  font-size: 100vw;
+  font-weight: 800;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+}
+.section_03 .section_03_sticky .headline_wrapper .headline2{
+  opacity: 0;
+}
+.section_03 .section_03_sticky .headline_wrapper .headline1 span{
+  background-image: url("../img/gradient1.jpg");
+}
+.section_03 .section_03_sticky .headline_wrapper .headline2 span{
+  background-image: url("../img/gradient2.jpg");
+}
+.section_03 .section_03_sticky .middle{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.2s;
+  word-break: keep-all;
+}
+.section_03 .section_03_sticky .middle span{
+  color: white;
+  font-size: 30vw;
+  font-weight: 500;
+  word-break: keep-all;
+  width: 300vw;
+}
+.section_03 .section_03_sticky .button_wrap{
+}
+.section_03 .section_03_sticky .section_03_text .left p{
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  width: 300px;
+  height: 104px;
+  margin: 0;
+}
+.section_03 .section_03_sticky .section_03_text{
+  opacity: 0;
+  transition: all 1s;
+  position: absolute;
+  bottom: 200px;
+  width: 700px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  left: calc(50% - 350px);
+  z-index: 99;
 }

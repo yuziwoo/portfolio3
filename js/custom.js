@@ -134,6 +134,12 @@ document.documentElement.addEventListener("wheel", (e) => {
     }
   })
 
+  header.addEventListener("mouseenter", (e) => {
+    if(header.classList.contains("header_hide")){
+      header.classList.remove("header_hide");
+    }
+  })
+
 
   /*버튼 따라다니기 효과*/
   let button = [];
