@@ -130,7 +130,7 @@ class App {
       }
     }
     if(window.innerWidth <= 1000){
-      if(window.scrollY > this.section_01.offsetHeight - 100){
+      if(window.scrollY > this.section_01.offsetHeight - 200){
         this.section_01.style.backgroundColor = "white";
         this.section_02.style.backgroundColor = "white";
       }else{

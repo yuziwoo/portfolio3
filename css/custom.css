@@ -19,12 +19,19 @@ html{
   color: #333333;
   font-family: 'Noto Sans KR', sans-serif;
 }
+@media screen and (max-width: 500px){
+  html{
+    overflow-x: hidden;
+  }
+}
 body{
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
+  -webkit-overflow-scrolling:touch;
+  -webkit-transform:translateZ(0);
 }
 a{
   color: #333333;
