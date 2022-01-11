@@ -1,0 +1,37 @@
+section{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .info{
+  text-align: center;
+  transition: all 1s;
+  transform: translateY(50px);
+  opacity: 0.2;
+  animation: info 1s forwards;
+}
+section .info h1{
+  color: #111111;
+  font-size: 32px;
+  line-height: 42px;
+  margin: 0;
+}
+section .info h3{
+  color: #999999;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+  padding-top: 20px;
+}
+@keyframes info {
+  80%{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}

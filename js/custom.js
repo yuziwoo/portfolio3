@@ -13,20 +13,20 @@ header.innerHTML = `
       </a>
     </li>
     <li class="header_text">
-      <a href="#">personality</a>
-      <a href="#" class="header_clip">personality</a>
+      <a href="personality.html">personality</a>
+      <a href="personality.html" class="header_clip">personality</a>
     </li>
     <li class="header_text">
-      <a href="#">works</a>
-      <a href="#" class="header_clip">works</a>
+      <a href="works.html">works</a>
+      <a href="works.html" class="header_clip">works</a>
     </li>
     <li class="header_text">
-      <a href="#">skill</a>
-      <a href="#" class="header_clip">skill</a>
+      <a href="skill.html">skill</a>
+      <a href="skill.html" class="header_clip">skill</a>
     </li>
     <li class="header_text">
-      <a href="#">contact</a>
-      <a href="#" class="header_clip">contact</a>
+      <a href="contact.html">contact</a>
+      <a href="contact.html" class="header_clip">contact</a>
     </li>
   </ul>
 </div>`;
