@@ -2,6 +2,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let pagey = 0;
   let section_01 = document.getElementsByClassName("section_01")[0];
   let section_02 = document.getElementsByClassName("section_02")[0];
+  let section_03 = document.getElementsByClassName("section_03")[0];
+  let section_04 = document.getElementsByClassName("section_04")[0];
   let section_02_h1 = [document.getElementsByClassName("section_02_h1")[0], document.getElementsByClassName("section_02_h1")[1], document.getElementsByClassName("section_02_h1")[2]];
   let section_01_height = 0;
   let section_02_h1_x = [window.innerWidth/10*3, window.innerWidth/10*1.5, window.innerWidth/10*3];
@@ -20,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let section_03_middle = document.getElementsByClassName("middle")[0];
   let section_03_text = document.getElementsByClassName("section_03_text")[0];
 
-  for(let i=0; i<50; i++){
+  for(let i=0; i<41; i++){
     section_03_event.push(false);
   }
 
@@ -38,7 +40,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
             section_02_img1.classList.add("section_02_img_on");
           }
         }
-        if(section_01_height > 1850){
+        if(section_01_height > 1950){
           if(!section_02_img2.classList.contains("section_02_img_on")){
             section_02_img2.classList.add("section_02_img_on");
           }
@@ -121,6 +123,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
         if(section_03_height >= 700){
           if(!section_03_event[7]){
             section_03_headline_wrapper.style.opacity = 0.6;
+            section_03_headline1.style.transform = "none"
+            section_03_headline2.style.transform = "none";
             section_03_event[7] = true;
           }
         }
@@ -128,6 +132,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
           if(!section_03_event[8]){
             section_03_headline_wrapper.style.opacity = 0.8;
             section_03_headline1.style.transform = "scale(0.8)";
+            section_03_headline2.style.transform = "scale(0.8)";
             section_03_event[8] = true;
           }
         }
@@ -135,6 +140,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
           if(!section_03_event[9]){
             section_03_headline_wrapper.style.opacity = 1;
             section_03_headline1.style.transform = "scale(0.7)";
+            section_03_headline2.style.transform = "scale(0.7)";
             section_03_event[9] = true;
           }
         }
@@ -626,10 +632,21 @@ window.addEventListener("DOMContentLoaded", (e) => {
             section_03_event[40] = false;
           }
         }
-
       }
-      console.log(section_03_height);
     }/*(pagey > rect.y)*/
+
+    if(window.innerWidth < 560 && rect.y < -section_01.offsetHeight-section_02.offsetHeight){
+        if(!section_03_event[41]){
+          section_03.classList.add("section_03_on");
+          section_03_event[41] = true;
+        }
+    }
+
+    if(rect.y <= -section_01.offsetHeight-section_02.offsetHeight-section_03.offsetHeight + 100){
+      if(!section_04.classList.contains("section_04_on")){
+        section_04.classList.add("section_04_on");
+      }
+    }
 
     pagey = rect.y;
   }
