@@ -1,10 +1,9 @@
 body{
-  background: rgb(0, 0, 0);
+  background: linear-gradient(120deg,  #12213A 0%, #004c6c 50%, #1E2B45 100%);
 }
 .section_04{
   width: 100vw;
   height: 100vh;
-  background-color: black;
   position: relative;
   transition: all 0.7s;
   color: white;
@@ -106,11 +105,9 @@ body{
   position: absolute;
   width: 1px;
   height: 20px;
-  background: white;
+  background-color: white;
   margin: 7.5px -20px;
-}
-.section_04 .contact .info a:hover h1{
-  color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.5s;
 }
 .section_04 .contact .icon svg{
   width: 30px;
@@ -118,9 +115,36 @@ body{
 }
 .section_04 .contact .icon svg path{
   fill: white;
+  transition: all 0.5s;
 }
+
+
+.section_04 .contact .phone:hover .icon svg path{
+  fill: #ffa8ab;
+}
+.section_04 .contact .phone:hover .info a h1{
+  color: #ffa8ab;
+}
+.section_04 .contact .phone:hover .info::before{
+  background-color: #ffa8ab;
+}
+.section_04 .contact .instagram:hover .icon svg path{
+  fill: #ffa8ab;
+}
+.section_04 .contact .instagram:hover .icon svg circle{
+  fill: #ffa8ab;
+}
+.section_04 .contact .instagram:hover .info a h1{
+  color: #ffa8ab;
+}
+.section_04 .contact .instagram:hover .info::before{
+  background-color: #ffa8ab;
+}
+
+
 .section_04 .contact .icon svg circle{
   fill: white;
+  transition: all 0.5s;
 }
 .section_04 .section_04_text{
   padding-top: calc(50vh - 68px);
@@ -140,7 +164,7 @@ body{
   font-size: 16px;
   line-height: 26px;
   font-weight: 600;
-  color: #999999;
+  color: #A5ABBD;
 }
 @media screen and (max-width: 720px){
   .section_04 .contact{

@@ -1007,11 +1007,9 @@ body{
   position: absolute;
   width: 1px;
   height: 20px;
-  background: white;
+  background-color: white;
   margin: 7.5px -20px;
-}
-.section_04 .contact .info a:hover h1{
-  color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.5s;
 }
 .section_04 .contact .icon svg{
   width: 30px;
@@ -1019,9 +1017,37 @@ body{
 }
 .section_04 .contact .icon svg path{
   fill: white;
+  transition: all 0.5s;
 }
+
+
+
+.section_04 .contact .phone:hover .icon svg path{
+  fill: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .phone:hover .info a h1{
+  color: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .phone:hover .info::before{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .instagram:hover .icon svg path{
+  fill: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .instagram:hover .icon svg circle{
+  fill: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .instagram:hover .info a h1{
+  color: rgba(255, 255, 255, 0.6);
+}
+.section_04 .contact .instagram:hover .info::before{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
 .section_04 .contact .icon svg circle{
   fill: white;
+  transition: all 0.5s;
 }
 .section_04 .section_04_text{
   padding-top: calc(50vh - 68px);
