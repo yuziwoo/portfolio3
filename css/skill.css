@@ -1,0 +1,42 @@
+body {
+  background-image: url("../img/skill.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.info{
+  width: 1000px;
+  height: 428px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  margin: 64px auto 0px;
+}
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: auto;
+}
+
+.skills .box{
+  width: 320px;
+  height: 428px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.skills .box:hover{
+  background: #FCEAFF;
+}
