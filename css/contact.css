@@ -140,25 +140,25 @@ body{
 
 
 .section_04 .contact .phone:hover .icon svg path{
-  fill: #ffa8ab;
+  fill: #F9F871;
 }
 .section_04 .contact .phone:hover .info a h1{
-  color: #ffa8ab;
+  color: #F9F871;
 }
 .section_04 .contact .phone:hover .info::before{
-  background-color: #ffa8ab;
+  background-color: #F9F871;
 }
 .section_04 .contact .instagram:hover .icon svg path{
-  fill: #ffa8ab;
+  fill: #F9F871;
 }
 .section_04 .contact .instagram:hover .icon svg circle{
-  fill: #ffa8ab;
+  fill: #F9F871;
 }
 .section_04 .contact .instagram:hover .info a h1{
-  color: #ffa8ab;
+  color: #F9F871;
 }
 .section_04 .contact .instagram:hover .info::before{
-  background-color: #ffa8ab;
+  background-color: #F9F871;
 }
 
 

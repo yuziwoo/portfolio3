@@ -635,7 +635,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       }
     }/*(pagey > rect.y)*/
 
-    if(window.innerWidth < 560 && rect.y < -section_01.offsetHeight-section_02.offsetHeight){
+    if(window.innerWidth < 560 ){
         if(!section_03_event[41]){
           section_03.classList.add("section_03_on");
           section_03_event[41] = true;
