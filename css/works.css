@@ -30,6 +30,17 @@ body::-webkit-scrollbar-thumb:hover{
   background-repeat: no-repeat;
   background-size: 1262px 580px;
   background-position: center center;
+  animation: opening 1s forwards;
+}
+@keyframes opening {
+  from{
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 .box .text h1{
   color: rgb(29, 29, 31);

@@ -263,16 +263,16 @@ function scrollEvent(evt) {
 
 
 window.addEventListener("DOMContentLoaded", (e) => {
-  /*버튼 따라다니기 효과*/
+  /*버튼 글자바꾸기 효과*/
   let button = [];
   let button_text = ["personality", "works", "skill", "contact"];
   for(let i=0; i<document.getElementsByClassName("button").length; i++){
     button.push(document.getElementsByClassName("button")[i]);
     document.getElementsByClassName("button")[i].firstElementChild.addEventListener("mouseenter", (e) => {
-      button[i].firstElementChild.innerText = button_text[i];
+      button[i].firstElementChild.firstElementChild.innerText = button_text[i];
     })
     document.getElementsByClassName("button")[i].firstElementChild.addEventListener("mouseleave", (e) => {
-      button[i].firstElementChild.innerText = "More";
+      button[i].firstElementChild.firstElementChild.innerText = "More";
     })
   }
 

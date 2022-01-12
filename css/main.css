@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 .button a{
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.5s;
 }
 
 .section_01{
@@ -285,7 +285,7 @@ body::-webkit-scrollbar {
   align-items: center;
   width: 150px;
   height: 54px;
-  background:  linear-gradient(to right, #ebe7dc,#a9c3e6,#bdc7d1);
+  background:  white;
   border-radius: 27px;
   display: none;
 }
@@ -298,19 +298,24 @@ body::-webkit-scrollbar {
   background: white;
 }
 
-.section_01 .view_02 .wrap .box4 .button a:hover span{
-  background: #333333;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .section_01 .view_02 .wrap .box4 .button a span{
   font-size: 17px;
   line-height: 17px;
   margin: 0;
   font-weight: bold;
-  color: white;
+  color: #333333;
   padding-bottom: 1px;
+}
+.button a:hover span{
+  animation: button_hover 1s forwards;
+}
+@keyframes button_hover {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -421,7 +426,7 @@ body::-webkit-scrollbar {
   align-items: center;
   width: 150px;
   height: 54px;
-  background:  linear-gradient(to right, #ebe7dc,#a9c3e6,#bdc7d1);
+  background:  white; /*linear-gradient(to right, #ebe7dc,#a9c3e6,#bdc7d1)*/
   border-radius: 27px;
   display: none;
 }
@@ -445,7 +450,6 @@ body::-webkit-scrollbar {
   line-height: 17px;
   margin: 0;
   font-weight: bold;
-  color: white;
   padding-bottom: 1px;
 }
 
@@ -456,10 +460,6 @@ body::-webkit-scrollbar {
 }
 .section_02 .button a span{
   color: #050505;
-}
-.section_02 .button a:hover{
-  background: #050505;
-  color: white;
 }
 .section_02 .text_wrap{
   padding-top: 80px;
