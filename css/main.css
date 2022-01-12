@@ -4,6 +4,9 @@ body{
   overflow-x: hidden;
   background: #050505;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .button a{
   transition: transform 0.2s;
 }

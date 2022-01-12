@@ -1,6 +1,9 @@
 body{
   background: linear-gradient(120deg,  #12213A 0%, #004c6c 50%, #1E2B45 100%);
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .section_04{
   width: 100vw;
   height: 100vh;

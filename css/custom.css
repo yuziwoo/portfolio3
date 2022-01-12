@@ -10,9 +10,7 @@ font-family: 'Roboto', sans-serif;
 @-o-viewport { width: device-width; }
 @viewport { width: device-width; }
 
-body::-webkit-scrollbar {
-  display: none;
-}
+
 /* 기본값 초기화 */
 html{
   margin: 0;
