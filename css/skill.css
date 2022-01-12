@@ -14,6 +14,7 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
   margin: 64px auto 0px;
+  animation: open 1s forwards;
 }
 
 .skills{
@@ -24,6 +25,19 @@ body {
   flex-wrap: wrap;
   width: 1000px;
   margin: auto;
+  animation: skills 0.7s 0.7s forwards;
+  animation: open 1s forwards;
+}
+
+@keyframes open {
+  from{
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .skills .box{
