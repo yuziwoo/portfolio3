@@ -121,9 +121,17 @@ function scrollEvent(evt) {
     evt.preventDefault();
   }
   rect = document.documentElement.getBoundingClientRect();
-  if(rect.y < -300){
-    document.body.classList.add("body_on");
+  if(window.innerWidth > 600){
+    if(rect.y < -300){
+      document.body.classList.add("body_on");
+    }else {
+      document.body.classList.remove("body_on");
+    }
   }else {
-    document.body.classList.remove("body_on");
+    if(rect.y < 0){
+      document.body.classList.add("body_on");
+    }else {
+      document.body.classList.remove("body_on");
+    }
   }
 }

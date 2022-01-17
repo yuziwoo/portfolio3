@@ -260,3 +260,10 @@ body::-webkit-scrollbar {
 .circle:hover span{
   color: dodgerblue;
 }
+@media screen and (max-width: 600px){
+  .circle{
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
