@@ -81,6 +81,10 @@ body::-webkit-scrollbar {
   font-weight: 500;
   margin: 0px 0px 40px 0px;
   font-size: 4.5vmax;
+  transition: color 1s;
+}
+.section_01 .text h1:hover{
+  color: dodgerblue;
 }
 .section_01 .text h3{
   opacity: 0;
@@ -110,7 +114,7 @@ body::-webkit-scrollbar {
 
 .section_02{
   width: 100vw;
-  height: 200vh;
+  padding-bottom: 120px;
   color: #222222;
   background: white;
   display: flex;
@@ -126,16 +130,13 @@ body::-webkit-scrollbar {
 }
 .section_02 .info ul li{
   margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 1s;
 }
-.section_02 .name h1{
-  margin: 0px;
-  display: block;
-  text-align: center;
-  font-size: 60px;
-  line-height: 80px;
-  font-weight: 600;
-  position: sticky;
-  top: calc(50% - 40px);
+.body_on .section_02 .info ul li{
+  opacity: 1;
+  transform: none;
 }
 .section_02 .info h5{
   margin: 0;
@@ -143,9 +144,119 @@ body::-webkit-scrollbar {
   font-weight: 600;
   margin-bottom : 10px;
   color: #666666;
+  transition: color 0.5s;
+  cursor: default;
+}
+.section_02 .info h5:hover{
+  color: dodgerblue;
+  user-select: none;
 }
 .section_02 .info span{
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+}
+
+.circle{
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 8s infinite linear;
+  cursor: default;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.circle span{
+  position: absolute;
+  top: 0px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  display: block;
+  height: 75px;
+  width: 14px;
+  transform-origin: bottom center;
+  color: white;
+  transition: all 1s;
+  animation: opacity 1s 2s forwards linear;
+  opacity: 0;
+}
+@keyframes opacity {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.body_on .circle span{
+  color: black;
+}
+.circle span:nth-child(1){
+  transform: rotate(-50deg);
+}
+.circle span:nth-child(2){
+  transform: rotate(-37deg);
+}
+.circle span:nth-child(3){
+  transform: rotate(-24deg);
+}
+.circle span:nth-child(4){
+  transform: rotate(-11deg);
+}
+.circle span:nth-child(5){
+  transform: rotate(2deg);
+}
+.circle span:nth-child(6){
+  transform: rotate(15deg);
+}
+.circle span:nth-child(7){
+  transform: rotate(41deg);
+}
+.circle span:nth-child(8){
+  transform: rotate(54deg);
+}
+.circle span:nth-child(9){
+  transform: rotate(67deg);
+}
+.circle span:nth-child(10){
+  transform: rotate(93deg);
+}
+.circle span:nth-child(11){
+  transform: rotate(106deg);
+}
+.circle span:nth-child(12){
+  transform: rotate(119deg);
+}
+.circle span:nth-child(13){
+  transform: rotate(132deg);
+}
+.circle span:nth-child(14){
+  transform: rotate(145deg);
+}
+.circle span:nth-child(15){
+  transform: rotate(158deg);
+}
+.circle span:nth-child(16){
+  transform: rotate(171deg);
+}
+.circle span:nth-child(17){
+  transform: rotate(185deg);
+}
+.circle span:nth-child(18){
+  transform: rotate(199deg);
+}
+.circle:hover span{
+  color: dodgerblue;
 }

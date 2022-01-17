@@ -81,6 +81,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let sub_img3 = document.getElementsByClassName("sub_img")[2];
   let main_img = document.getElementsByClassName("main_img_wrap")[0];
   let text = document.getElementsByClassName("text")[0];
+  let circle = document.getElementsByClassName("circle");
   rect = document.documentElement.getBoundingClientRect();
 
   if(rect.y > -1){
@@ -111,6 +112,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
     scrollCount++
   }
 
+  scrollEvent();
+
 })
 
 function scrollEvent(evt) {
@@ -118,4 +121,9 @@ function scrollEvent(evt) {
     evt.preventDefault();
   }
   rect = document.documentElement.getBoundingClientRect();
+  if(rect.y < -300){
+    document.body.classList.add("body_on");
+  }else {
+    document.body.classList.remove("body_on");
+  }
 }
