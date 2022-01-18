@@ -10,7 +10,7 @@ li{
 
 .title{
   width: 100%;
-  padding: 150px 0px 60px;
+  padding: 120px 0px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +65,7 @@ li{
   align-items: center;
 }
 .skill .skill_list{
+  background: white;
   width: calc(100vw - 20px);
   max-width: 800px;
   border-top: 2px solid #111111;
@@ -129,9 +130,15 @@ li{
 
 .skill_content_values{
   width: calc(100% - 20px);
-  padding: 20px 10px;
+  padding: 20px 30px;
   background: #50606E;
   color: white;
+}
+.skill_content_values a{
+  color: white;
+}
+.skill_content_values a:hover{
+  text-decoration: underline;
 }
 .skill_content_values_hide{
   display: none;
@@ -139,6 +146,10 @@ li{
 }
 .skill_content_values iframe{
   width: calc(100% - 20px);
+}
+
+.skill_content_values .margin_left_10{
+  margin-left: 10px;
 }
 @keyframes list_hover {
   from{

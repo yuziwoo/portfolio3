@@ -12,12 +12,14 @@ window.addEventListener("DOMContentLoaded", (e) => {
   document.body.appendChild(skill_content_value_box);
 
   category1.addEventListener("click", () => {
+    skill_content_value_box.classList.add("skill_content_values_hide");
     for(let i=0; i<skill_contents.length; i++){
       skill_contents[i].classList.remove("hide_content")
     }
   })
 
   category2.addEventListener("click", () => {
+    skill_content_value_box.classList.add("skill_content_values_hide");
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("develop")){
         skill_contents[i].classList.remove("hide_content")
@@ -28,6 +30,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   })
 
   category3.addEventListener("click", () => {
+    skill_content_value_box.classList.add("skill_content_values_hide");
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("base")){
         skill_contents[i].classList.remove("hide_content")
@@ -38,6 +41,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   })
 
   category4.addEventListener("click", () => {
+    skill_content_value_box.classList.add("skill_content_values_hide");
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("interactive")){
         skill_contents[i].classList.remove("hide_content")
@@ -48,7 +52,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   })
 
   // 리스트 클릭시 값 변환 (아코디언)
-  let skill_content_values = ["<span>hi</span>", "hi2"];
+  let skill_content_values = [`<a href="img/note.xlsx">정리 노트 엑셀 다운로드<img class=".margin_left_10" src="img/download.png"></a>`,
+  "hi2"];
 
   for(let i=0; i<skill_contents.length; i++){
     skill_contents[i].addEventListener("click", (e) => {
