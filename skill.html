@@ -32,27 +32,81 @@
 
     <!-- CSS-->
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/temporary.css">
     <link rel="stylesheet" href="css/skill.css">
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/custom.js">/**/</script>
+    <script type="text/javascript" src="js/skill.js">/**/</script>
 
   </head>
   <body>
-    <section class="info">
-
+    <section class="title">
+      <ul class="title_list">
+        <li class="title_content title_active" id="show_all">
+          <a href="#">
+            <h1>전체보기</h1>
+          </a>
+        </li>
+        <li class="title_content" id="develop">
+          <a href="#">
+            <h1>웹 개발</h1>
+          </a>
+        </li>
+        <li class="title_content" id="base">
+          <a href="#">
+            <h1>기본 기술</h1>
+          </a>
+        </li>
+        <li class="title_content" id="interactive">
+          <a href="#">
+            <h1>인터렉티브</h1>
+          </a>
+        </li>
+      </ul>
     </section>
-    <section class="skills">
-      <div class="box">
+    <section class="skill">
+      <ul class="skill_list">
+        <li class="skill_content develop">
+          <a href="#">
+            <div class="skill_id">
+              <h4>웹 개발</h4>
+            </div>
+            <div class="skill_info">
+              <h1>공부했던 정리노트</h1>
+              <span>
+                HTML, CSS, JavaScript, Github 등 그 동안 공부했던<br>
+                내용들을 엑셀 파일로 확인할 수 있습니다.<br>
+                <strong>엑셀 파일이 다운로드 됩니다.</strong>
+              </span>
+            </div>
+            <div class="icon">
+              <figure>
+                <img src="img/right-arrow.png" alt="">
+              </figure>
+            </div>
+          </a>
+        </li>
 
-      </div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
+        <li class="skill_content develop">
+          <a href="#">
+            <div class="skill_id">
+              <h4>웹 개발</h4>
+            </div>
+            <div class="skill_info">
+              <h1>웹 접근성 체크리스트</h1>
+              <span>
+                웹사이트를 개발한다면 지켜야하는 웹 접근성<br>
+                체크리스트들을 담아 만들었습니다.<br>
+              </span>
+            </div>
+            <div class="icon">
+              <figure>
+                <img src="img/right-arrow.png" alt="">
+              </figure>
+            </div>
+          </a>
+        </li>
+      </ul>
     </section>
 
   </body>

@@ -1,56 +1,189 @@
 body {
-  background-image: url("../img/skill.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   overflow-x: hidden;
 }
-.info{
-  width: 1000px;
-  height: 428px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
-  margin: 64px auto 0px;
-  animation: open 1s forwards;
+h1, h4{
+  margin: 0;
+}
+li{
+  list-style: none;
 }
 
-.skills{
+.title{
+  width: 100%;
+  padding: 150px 0px 60px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 20px;
-  flex-wrap: wrap;
-  width: 1000px;
-  margin: auto;
-  animation: skills 0.7s 0.7s forwards;
-  animation: open 1s forwards;
+  justify-content: center;
+  align-items: center;
+}
+.title .title_list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title .title_list .title_content{
+  text-align: center;
+  width: 110px;
+  margin: 0px 30px;
+}
+.title .title_list .title_content:after{
+  content: "";
+  display: block;
+  margin: 8px auto 0px;
+  width: 0px;
+  height: 2px;
+  background-color: #333333;
+  transition: width 0.5s, background-color 0.7s;
+}
+.title .title_list .title_content:hover:after{
+  width: 100%;
+  background-color: #89B0CD;
+}
+.title .title_list .title_active:after{
+  width: 100%;
+  background-color: #89B0CD;
+}
+.title .title_list .title_content a h1{
+  font-size: 22px;
+  display: inline-block;
+  transition: color 0.7s;
+}
+.title .title_list .title_content:hover a h1{
+  color: #89B0CD;
+}
+.title .title_list .title_active a h1{
+  color: #89B0CD;
 }
 
-@keyframes open {
+
+.skill{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill .skill_list{
+  width: calc(100vw - 20px);
+  max-width: 800px;
+  border-top: 2px solid #111111;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+}
+.skill .skill_list .skill_content{
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+}
+.skill .skill_list .skill_content a{
+  padding: 20px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s;
+}
+.skill .skill_list .skill_content a:hover{
+  background-color: aliceblue;
+}
+.skill .skill_list .skill_content a .skill_id{
+  width: 100px;
+  text-align: center;
+}
+.skill .skill_list .skill_content a .skill_id h4{
+  font-size: 14px;
+  font-weight: 400;
+}
+.skill .skill_list .skill_content a .skill_info{
+  padding: 0px 10px;
+  width: calc(100% - 160px);
+}
+.skill .skill_list .skill_content a .skill_info h1{
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.skill .skill_list .skill_content a .skill_info span{
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.skill .skill_list .skill_content a .skill_info span strong{
+  font-weight: 400;
+  color: darkred;
+}
+.skill .skill_list .icon{
+  width: 80px;
+  padding: 0px 10px;
+}
+.skill .skill_list .icon figure{
+  margin: auto;
+}
+.skill .skill_list .icon figure img{
+  width: 40px;
+  opacity: 0.2;
+}
+.skill .skill_list .skill_content a:hover .icon figure img{
+  animation: list_hover 1.5s infinite cubic-bezier(.99,1,.68,.94);
+}
+
+.skill_content_values{
+  width: calc(100% - 20px);
+  padding: 20px 10px;
+  background: #50606E;
+  color: white;
+}
+.skill_content_values_hide{
+  display: none;
+  visibility: hidden;
+}
+.skill_content_values iframe{
+  width: calc(100% - 20px);
+}
+@keyframes list_hover {
   from{
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateX(-10px);
   }
   to{
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(10px);
   }
 }
 
-.skills .box{
-  width: 320px;
-  height: 428px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
-  transition: all 0.5s;
-  cursor: pointer;
+@media screen and (max-width: 800px){
+  .title{
+    padding: 80px 0px 40px;
+  }
+  .title .title_list .title_content a h1{
+    font-size: 17px;
+  }
+  .title .title_list .title_content:after{
+    margin: 4px auto 0px;
+  }
+  .title .title_list .title_content{
+    text-align: center;
+    width: 85px;
+    margin: 0px 10px;
+  }
 }
-
-.skills .box:hover{
-  background: #FCEAFF;
+@media screen and (max-width: 400px){
+  .title{
+    padding: 80px 0px 40px;
+  }
+  .title .title_list .title_content a h1{
+    font-size: 16px;
+  }
+  .title .title_list .title_content:after{
+    margin: 4px auto 0px;
+  }
+  .title .title_list .title_content{
+    text-align: center;
+    width: 80px;
+    margin: 0px 4px;
+  }
+}
+.skill .skill_list .hide_content{
+  display: none;
+  visibility: hidden;
 }
