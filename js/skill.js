@@ -11,15 +11,25 @@ window.addEventListener("DOMContentLoaded", (e) => {
   skill_content_value_box.classList.add("skill_content_values_hide");
   document.body.appendChild(skill_content_value_box);
 
+  let content_index = 10000;
+  let clickCount = 0;
+
   category1.addEventListener("click", () => {
     skill_content_value_box.classList.add("skill_content_values_hide");
+    content_index = 10000;
     for(let i=0; i<skill_contents.length; i++){
       skill_contents[i].classList.remove("hide_content")
     }
+
+    category1.classList.add("title_active");
+    category2.classList.remove("title_active");
+    category3.classList.remove("title_active");
+    category4.classList.remove("title_active");
   })
 
   category2.addEventListener("click", () => {
     skill_content_value_box.classList.add("skill_content_values_hide");
+    content_index = 10000;
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("develop")){
         skill_contents[i].classList.remove("hide_content")
@@ -27,10 +37,16 @@ window.addEventListener("DOMContentLoaded", (e) => {
         skill_contents[i].classList.add("hide_content")
       }
     }
+
+    category2.classList.add("title_active");
+    category1.classList.remove("title_active");
+    category3.classList.remove("title_active");
+    category4.classList.remove("title_active");
   })
 
   category3.addEventListener("click", () => {
     skill_content_value_box.classList.add("skill_content_values_hide");
+    content_index = 10000;
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("base")){
         skill_contents[i].classList.remove("hide_content")
@@ -38,10 +54,16 @@ window.addEventListener("DOMContentLoaded", (e) => {
         skill_contents[i].classList.add("hide_content")
       }
     }
+
+    category3.classList.add("title_active");
+    category2.classList.remove("title_active");
+    category1.classList.remove("title_active");
+    category4.classList.remove("title_active");
   })
 
   category4.addEventListener("click", () => {
     skill_content_value_box.classList.add("skill_content_values_hide");
+    content_index = 10000;
     for(let i=0; i<skill_contents.length; i++){
       if(skill_contents[i].classList.contains("interactive")){
         skill_contents[i].classList.remove("hide_content")
@@ -49,6 +71,11 @@ window.addEventListener("DOMContentLoaded", (e) => {
         skill_contents[i].classList.add("hide_content")
       }
     }
+
+    category4.classList.add("title_active");
+    category2.classList.remove("title_active");
+    category3.classList.remove("title_active");
+    category1.classList.remove("title_active");
   })
 
   // 리스트 클릭시 값 변환 (아코디언)
@@ -58,9 +85,19 @@ window.addEventListener("DOMContentLoaded", (e) => {
   for(let i=0; i<skill_contents.length; i++){
     skill_contents[i].addEventListener("click", (e) => {
       e.preventDefault();
+
+      if(content_index == i){
+        clickCount += 1;
+      }
+
       skill_content_value_box.innerHTML = skill_content_values[i];
       skill_content_value_box.classList.remove("skill_content_values_hide");
       skill_contents[i].parentElement.insertBefore(skill_content_value_box, skill_contents[i+1]);
+
+      if(!skill_content_value_box.classList.contains("skill_content_values_hide") && content_index == i && clickCount % 2 == 1){
+        skill_content_value_box.classList.add("skill_content_values_hide");
+      }
+      content_index = i;
     })
   }
 
