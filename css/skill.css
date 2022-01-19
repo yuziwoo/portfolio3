@@ -148,6 +148,8 @@ li{
 }
 .skill_content_values iframe{
   width: calc(100% - 20px);
+  border: 1px solid #89B0CD;
+  border-radius: 15px;
 }
 
 .skill_content_values .margin_left_10{

@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
   // 리스트 클릭시 값 변환 (아코디언)
   let skill_content_values = [`<a href="img/note.xlsx" class="display_flex_start">정리 노트 엑셀 다운로드<img class="margin_left_10" src="img/download.png"></a>`,
-  "hi2"];
+  `<iframe src="web_accessibility.html" height="400px"></iframe>`];
 
   for(let i=0; i<skill_contents.length; i++){
     skill_contents[i].addEventListener("click", (e) => {
