@@ -231,7 +231,11 @@ li{
     width: 85px;
     margin: 0px 10px;
   }
+  .skill_content_values{
+    padding: 20px 10px;
+  }
 }
+
 @media screen and (max-width: 400px){
   .title{
     padding: 80px 0px 40px;

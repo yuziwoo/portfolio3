@@ -32,7 +32,7 @@ a {
 }
 
 .background {
-  position: relative;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   filter: blur(10px) opacity(20%);
@@ -165,4 +165,34 @@ a {
 }
 .info .hyperlink .button_box .down{
   height: 28px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .content_box{
+    position: absolute;
+    left: calc(50vw - 150px);
+    top: 54px;
+  }
+  body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 1100px;
+  }
+  body::-webkit-scrollbar{display:none;}
+  body{
+    -ms-overflow-style:none;
+  }
+  .info_on figure video {
+    width: calc(100vw - 20px);
+  }
+  .info_on{
+    position: absolute;
+    width: calc(100vw - 20px);
+    left: 10px;
+    top: 654px;
+  }
+  .info .hyperlink{
+    width: calc(100vw - 20px);
+  }
 }

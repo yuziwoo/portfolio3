@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let info = document.getElementsByClassName("info")[0];
   let video = document.getElementsByTagName("video")[0];
   let button_box = document.getElementsByClassName("button_box")[0];
+  let size = 0;
 
   let content_values = [
     ["baobab", "https://yuziwoo.github.io/baobab/"],
@@ -45,4 +46,20 @@ window.addEventListener("DOMContentLoaded", (e) => {
   button_down.addEventListener("click", () => {
     content_list.scrollBy(0, 56);
   })
+
+  if(size < 1){
+    if(window.innerWidth <= 550){
+      alert("해당 페이지는 500px 이상의 디스플레이 사용을 권장합니다.")
+      size++
+    }
+  }
 });
+
+window.addEventListener("resize", (e) => {
+  if(size < 1){
+    if(window.innerWidth <= 550){
+      alert("해당 페이지는 500px 이상의 디스플레이 사용을 권장합니다.")
+      size++
+    }
+  }
+})
