@@ -141,6 +141,7 @@ body::-webkit-scrollbar {
   z-index: 2;
   opacity: 0;
   color: white;
+  cursor: default;
 }
 
 .section_01 .view_02_start{
