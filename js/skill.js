@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   document.body.appendChild(skill_content_value_box);
 
   let content_index = 10000;
-  let clickCount = 0;
+  let clickCount = 2;
 
   category1.addEventListener("click", () => {
     skill_content_value_box.classList.add("skill_content_values_hide");
@@ -88,6 +88,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
       if(content_index == i){
         clickCount += 1;
+      }else {
+        clickCount = 2;
       }
 
       skill_content_value_box.innerHTML = skill_content_values[i];
@@ -97,6 +99,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       if(!skill_content_value_box.classList.contains("skill_content_values_hide") && content_index == i && clickCount % 2 == 1){
         skill_content_value_box.classList.add("skill_content_values_hide");
       }
+
       content_index = i;
     })
   }
