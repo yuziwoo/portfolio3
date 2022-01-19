@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>circle text</title>
+  </head>
+
+  <style media="screen">
+    body{
+      margin: 0;
+      position: relative;
+    }
+    .circle{
+      position: absolute;
+      left: calc(390px - 75px);
+      top: calc(190px - 75px);
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotate 8s infinite linear;
+      cursor: default;
+    }
+    @keyframes rotate {
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+    .circle span{
+      position: absolute;
+      top: 0px;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 600;
+      display: block;
+      height: 75px;
+      width: 14px;
+      transform-origin: bottom center;
+      color: white;
+      transition: all 1s;
+      animation: opacity 1s forwards linear;
+      opacity: 0;
+    }
+    @keyframes opacity {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    .circle span{
+      color: black;
+    }
+    .circle span:nth-child(1){
+      transform: rotate(-50deg);
+    }
+    .circle span:nth-child(2){
+      transform: rotate(-37deg);
+    }
+    .circle span:nth-child(3){
+      transform: rotate(-24deg);
+    }
+    .circle span:nth-child(4){
+      transform: rotate(-11deg);
+    }
+    .circle span:nth-child(5){
+      transform: rotate(2deg);
+    }
+    .circle span:nth-child(6){
+      transform: rotate(15deg);
+    }
+    .circle span:nth-child(7){
+      transform: rotate(41deg);
+    }
+    .circle span:nth-child(8){
+      transform: rotate(54deg);
+    }
+    .circle span:nth-child(9){
+      transform: rotate(67deg);
+    }
+    .circle span:nth-child(10){
+      transform: rotate(93deg);
+    }
+    .circle span:nth-child(11){
+      transform: rotate(106deg);
+    }
+    .circle span:nth-child(12){
+      transform: rotate(119deg);
+    }
+    .circle span:nth-child(13){
+      transform: rotate(132deg);
+    }
+    .circle span:nth-child(14){
+      transform: rotate(145deg);
+    }
+    .circle span:nth-child(15){
+      transform: rotate(158deg);
+    }
+    .circle span:nth-child(16){
+      transform: rotate(171deg);
+    }
+    .circle span:nth-child(17){
+      transform: rotate(185deg);
+    }
+    .circle span:nth-child(18){
+      transform: rotate(199deg);
+    }
+    .circle:hover span{
+      color: dodgerblue;
+    }
+  </style>
+  <body>
+    <div class="circle">
+      <span>R</span>
+      <span>E</span>
+      <span>P</span>
+      <span>E</span>
+      <span>A</span>
+      <span>T</span>
+      <span>T</span>
+      <span>H</span>
+      <span>E</span>
+      <span>C</span>
+      <span>H</span>
+      <span>A</span>
+      <span>L</span>
+      <span>L</span>
+      <span>E</span>
+      <span>N</span>
+      <span>G</span>
+      <span>E</span>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
 }
@@ -6,6 +9,29 @@ h1, h4{
 }
 li{
   list-style: none;
+}
+
+.top{
+  width: 45px;
+  height: 45px;
+  background: #666666;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #dddddd;
+  transition: all 0.5s;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.top:hover{
+  color: #666666;
+  background: #e4e4e4;
 }
 
 .title{
@@ -63,12 +89,14 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 120px;
 }
 .skill .skill_list{
   background: white;
   width: calc(100vw - 20px);
   max-width: 800px;
   border-top: 2px solid #111111;
+  border-bottom: 2px solid #111111;
   margin: 0;
   padding: 0px;
   overflow: hidden;
@@ -88,12 +116,29 @@ li{
   background-color: aliceblue;
 }
 .skill .skill_list .skill_content a .skill_id{
-  width: 100px;
+  width: 120px;
   text-align: center;
 }
 .skill .skill_list .skill_content a .skill_id h4{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
+  text-align: center;
+  padding: 4px;
+  margin: auto;
+  border-radius: 14px;
+  color: white;
+}
+.skill .skill_list .develop a .skill_id h4{
+  background-color: RoyalBlue;
+  width: 56px;
+}
+.skill .skill_list .interactive a .skill_id h4{
+  background-color: FireBrick;
+  width: 74px;
+}
+.skill .skill_list .base a .skill_id h4{
+  background-color: DarkSlateGrey;
+  width: 64px;
 }
 .skill .skill_list .skill_content a .skill_info{
   padding: 0px 10px;

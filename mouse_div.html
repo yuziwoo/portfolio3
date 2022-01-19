@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mouse_div</title>
+
+    <style media="screen">
+      body{
+        margin: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 90px;
+        font-weight: bold;
+        color: #268E57;
+        background: pink;
+      }
+      html, a{
+        cursor: none!important;
+      }
+      .mouse{
+        position: fixed;
+        z-index: 999;
+        pointer-events:none;
+        top: 0px;
+        left: 0px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        mix-blend-mode: difference;
+      }
+
+      .mouse1{
+        background: white;
+      }
+
+      .mouse2{
+        transition: all 0.7s, transform 0.1s;
+        width: 30px;
+        height: 30px;
+        border: 2px solid white;
+      }
+      .hover{
+        width: 80px;
+        height: 80px;
+        border: 2px solid white;
+      }
+      .text{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 120px;
+        font-weight: 800;
+        color: black;
+        background: coral;
+        position: relative;
+      }
+      .text2{
+        color: white;
+        background: orange;
+      }
+      .text3{
+        color: yellow;
+        background: darkblue;
+      }
+      .box{
+        width: 300px;
+        height: 300px;
+        margin: 80px auto;
+        color: red;
+      }
+    </style>
+
+    <script type="text/javascript" src="js/mouse_div.js"></script>
+  </head>
+  <body>
+    <div class="mouse mouse1"></div>
+    <div class="mouse mouse2"></div>
+    <div class="text">
+      HELLO
+    </div>
+    <div class="text text2">
+      PLEASE
+    </div>
+    <div class="text text3">
+      HOVER box
+    </div>
+    <div class="text box">
+      box
+    </div>
+  </body>
+</html>
