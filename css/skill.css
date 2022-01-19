@@ -75,7 +75,7 @@ li{
 }
 .skill .skill_list .skill_content{
   width: 100%;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
 }
 .skill .skill_list .skill_content a{
   padding: 20px 0px;
@@ -125,17 +125,19 @@ li{
   opacity: 0.2;
 }
 .skill .skill_list .skill_content a:hover .icon figure img{
-  animation: list_hover 1.5s infinite cubic-bezier(.99,1,.68,.94);
+  animation: list_hover 1s 3 cubic-bezier(.99,1,.68,.94) forwards;
 }
 
 .skill_content_values{
   width: calc(100% - 20px);
   padding: 20px 30px;
-  background: #50606E;
-  color: white;
+  background: white;
+  color: #333333;
+  border-top: 1px dashed #dddddd;
+  border-bottom: 2px double #dddddd;
 }
 .skill_content_values a{
-  color: white;
+  color: darkred;
 }
 .skill_content_values a:hover{
   text-decoration: underline;
@@ -151,14 +153,19 @@ li{
 .skill_content_values .margin_left_10{
   margin-left: 10px;
 }
+.skill_content_values .display_flex_start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 @keyframes list_hover {
   from{
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateY(-5px);
   }
   to{
     opacity: 1;
-    transform: translateX(10px);
+    transform: translateY(5px);
   }
 }
 
