@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
   let content_values = [
     ["baobab", "https://yuziwoo.github.io/baobab/"],
-    ["", ""]
+    ["elgroup", "elgroup/index.html"]
   ]
 
   content_list.addEventListener("click", () => {
