@@ -82,6 +82,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let skill_content_values = [`<a href="img/note.xlsx" class="display_flex_start">정리 노트 엑셀 다운로드<img class="margin_left_10" src="img/download.png"></a>`,
   `<iframe src="web_accessibility.html" height="400px"></iframe>`,
   `<iframe src="header_response.html" height="400px"></iframe>`,
+  `<iframe src="swiper.html" height="400px"></iframe>`,
   `<iframe src="snow.html" height="400px"></iframe>`,
   `<a href="mouse_div.html" target="_blank" class="display_flex_start">마우스 커서 효과 확인하러 이동하기<img class="margin_left_10" src="img/right.png"></a>`,
   `<iframe src="circle.html" height="400px"></iframe>`

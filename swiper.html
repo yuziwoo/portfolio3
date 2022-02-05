@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>swiper</title>
+
+    <script type="text/javascript" src="js/swiper.js">/**/</script>
+
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+
+      div, ul, li, button {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        border: none;
+        outline: none;
+      }
+
+      .swiper {
+        width: 300px;
+        height: 240px;
+        overflow: hidden;
+        margin: 50px auto 0px;
+        border-radius: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-left: 1px solid rgba(255, 255, 255, 0.7);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+      }
+
+      .swiper_content_box {
+        width: 1500px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .swiper_content {
+        background: #f7f8fc;
+        width: 300px;
+        height: 240px;
+        display: inline-block;
+      }
+
+      .swiper_pagination {
+        width: 300px;
+        height: 6px;
+        margin: 15px auto 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper_paging_button {
+        width: 6px;
+        height: 6px;
+        margin-left: 4px;
+        border-radius: 50%;
+        background-color: #a8a8a8;
+        cursor: pointer;
+      }
+
+      .swiper_paging_button_active {
+        background-color: #0095f6;
+      }
+
+      .swiper_paging_button:first-child {
+        margin-left: 0px;
+      }
+
+      .swiper_btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: calc(50% - 15px);
+        background: transparent;
+      }
+
+      .swiper_btn_left {
+        left: 5px;
+      }
+
+      .swiper_btn_right {
+        right: 5px;
+      }
+
+      .swiper_btn_img {
+        width: 30px;
+        height: 30px;
+        transition: opacity 0.4s;
+      }
+
+      .swiper_btn:hover .swiper_btn_img {
+        opacity: 0.6;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="swiper">
+      <ul class="swiper_content_box">
+        <li class="swiper_content" style="background-image:url('img/swiper_01.jpg');"></li>
+        <li class="swiper_content" style="background-image:url('img/swiper_02.jpg');"></li>
+        <li class="swiper_content" style="background-image:url('img/swiper_03.jpg');"></li>
+        <li class="swiper_content" style="background-image:url('img/swiper_04.jpg');"></li>
+        <li class="swiper_content" style="background-image:url('img/swiper_05.jpg');"></li>
+      </ul>
+
+      <button type="button" name="button" class="swiper_btn swiper_btn_left">
+        <div class="swiper_btn_img" style="background-image:url('img/left.png');"></div>
+      </button>
+      <button type="button" name="button" class="swiper_btn swiper_btn_right">
+        <div class="swiper_btn_img" style="background-image:url('img/right.png');"></div>
+      </button>
+    </div>
+
+    <ul class="swiper_pagination">
+      <li class="swiper_paging_button swiper_paging_button_active"></li>
+      <li class="swiper_paging_button"></li>
+      <li class="swiper_paging_button"></li>
+      <li class="swiper_paging_button"></li>
+      <li class="swiper_paging_button"></li>
+    </ul>
+
+  </body>
+</html>
