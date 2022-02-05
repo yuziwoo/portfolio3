@@ -11,6 +11,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let button_box = document.getElementsByClassName("button_box")[0];
   let size = 0;
 
+  content_list.addEventListener("scroll", () => {
+    console.log(content_list.scrollTop);
+  })
+
   let content_values = [
     ["baobab", "https://yuziwoo.github.io/baobab/"],
     ["elgroup", "elgroup/index.html"]
@@ -41,10 +45,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
   }
 
   button_up.addEventListener("click", () => {
-    content_list.scrollBy(0, -56);
+    content_list.scrollTo(0, 200);
   })
   button_down.addEventListener("click", () => {
-    content_list.scrollBy(0, 56);
+    content_list.scrollTo(0, 600);
   })
 
   if(size < 1){
