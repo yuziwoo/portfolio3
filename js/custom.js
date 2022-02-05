@@ -30,7 +30,7 @@ header.innerHTML = `
     </li>
   </ul>
 </div>`;
-document.body.appendChild(header);
+document.body.insertBefore(header, document.body.childNodes[0]);
 
 /*header text hover효과*/
 let header_text = document.getElementsByClassName("header_text");
