@@ -81,6 +81,19 @@ for(let i=0; i<header_text.length; i++){
   })/*mouseenter END*/
 }/*반복함수 END*/
 
+header_text[0].addEventListener("click", () => {
+  location.href = "personality.html";
+})
+header_text[1].addEventListener("click", () => {
+  location.href = "works.html";
+})
+header_text[2].addEventListener("click", () => {
+  location.href = "skill.html";
+})
+header_text[3].addEventListener("click", () => {
+  location.href = "contact.html";
+})
+
 
 /* header 나타나고 사라지는 효과*/
 /*wheel*/
