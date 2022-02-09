@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   })
 
   let content_values = [
-    ["baobab", "https://yuziwoo.github.io/baobab/"],
+    ["baobab", "https://yuziwoo.github.io/baobab2/"],
     ["elgroup", "elgroup/index.html"]
   ]
 
@@ -57,13 +57,15 @@ window.addEventListener("DOMContentLoaded", (e) => {
       size++
     }
   }
-});
 
-window.addEventListener("resize", (e) => {
-  if(size < 1){
-    if(window.innerWidth <= 550){
-      alert("해당 페이지는 500px 이상의 디스플레이 사용을 권장합니다.")
-      size++
+  window.addEventListener("resize", (e) => {
+    if(size < 1){
+      if(window.innerWidth <= 550){
+        alert("해당 페이지는 500px 이상의 디스플레이 사용을 권장합니다.")
+        size++
+      }
     }
-  }
-})
+  })
+
+  
+});
